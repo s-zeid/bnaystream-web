@@ -1,0 +1,75 @@
+<!DOCTYPE html><!-- vim: set fdm=marker: -->
+
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>BnayStream</title>
+  <meta name="viewport" content="width=device-width; minimum-scale=1.0; initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="BnayStream" />
+  <meta name="theme-color" content="#3F51B5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="BnayStream" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="out/mdlite/material.min.css" />
+  <link rel="stylesheet" type="text/css" href="client.css" />
+  <script type="text/javascript" src="out/mdlite/material.min.js"></script>
+ </head>
+ <body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-base mdl-color--grey-100 mdl-color-text--grey-700 app-root">
+   <header class="mdl-layout__header is-casting-shadow app-heading">
+    <div class="mdl-layout__header-row app-toolbar">
+     <div class="mdl-layout-title app-title"><a href=".">BnayStream</a></div>
+     <div class="mdl-layout-spacer"></div>
+     <nav class="mdl-navigation app-buttons">
+      <a class="mdl-navigation__link mdl-navigation__link--icon mdl-js-ripple-effect
+                app-stop" href="#" title="Stop">
+       <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">stop</i>
+       </button>
+       <span>Stop</span>
+      </a>
+      <a class="mdl-navigation__link mdl-navigation__link--icon mdl-js-ripple-effect
+                app-go" href="#" title="Go">
+       <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">play_arrow</i>
+       </button>
+       <span>Go</span>
+      </a>
+     </nav>
+    </div>
+   </header>
+   <div class="mdl-layout__content app-scrollable">
+    <div class="app-templates">
+     <textarea class="app-field-string">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label
+                  app-field-string" data-name="">
+       <input class="mdl-textfield__input" type="text" id="x" name="x" />
+       <label class="mdl-textfield__label app-field-caption" for="field-string"></label>
+      </div>
+     </textarea>
+     <textarea class="app-field-boolean">
+      <div class="app-field-boolean" data-name="">
+       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="field-boolean">
+        <span class="mdl-switch__label app-field-caption"></span>
+        <input type="checkbox" id="x" name="x" class="mdl-switch__input">
+       </label>
+      </div>
+     </textarea>
+    </div>
+    <main class="mdl-grid app-main">
+     <form action="." method="POST" enctype="application/x-www-form-urlencoded"
+           class="mdl-cell mdl-cell--9-col mdl-cell--4-col-phone app-go-form">
+     </form>
+     <form action="." method="POST" enctype="application/x-www-form-urlencoded"
+           class="mdl-cell mdl-cell--9-col mdl-cell--4-col-phone app-stop-form">
+      <input type="hidden" name="_control" value="stop" />
+     </form>
+    </main>
+   </div>
+  </div>
+  <script type="text/javascript" src="out/bundle.js"></script>
+ </body>
+</html>
